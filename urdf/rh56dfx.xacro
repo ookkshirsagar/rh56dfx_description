@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot name="rh56dfx" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ================= ARGUMENTS ================= -->
+
+  <xacro:arg name="side" default="left"/>
+  <xacro:arg name="prefix" default=""/>
+  <xacro:arg name="use_world" default="false"/>
+
+  <xacro:property name="side_s" value="$(arg side)"/>
+  <xacro:property name="prefix_p" value="$(arg prefix)"/>
+  <xacro:property name="world_w" value="$(arg use_world)"/>
+
+  <!-- ================= INCLUDE MAIN MACRO ================= -->
+
+  <xacro:include filename="$(find rh56dfx_description)/urdf/rh56dfx_macro.xacro"/>
+
+
+
+  <!-- ================= OPTIONAL WORLD LINK ================= -->
+
+  <xacro:if value="${world_w}">
+    <link name="world"/>
+    <joint name="world_joint" type="fixed">
+      <parent link="world"/>
+      <child link="${prefix_p}hand_root)"/>
+      </joint>
+  </xacro:if>
+
+  <!-- ================= INSTANTIATE HAND ================= -->
+
+  <xacro:rh56dfx_hand
+      side="${side_s}"
+      prefix="${prefix_p}"/>
+
+</robot>

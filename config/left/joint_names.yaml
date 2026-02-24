@@ -1,0 +1,161 @@
+###############################################################
+# JOINT NAME ORDER CONFIGURATION
+#
+# Robot  : Inspire Hand RH56DFX Left
+# File   : joint_names.yaml
+#
+# Purpose
+# -------------------------------------------------------------
+# Defines the ordered list of controllable joints used by:
+#   • ros2_control controllers
+#   • MoveIt execution pipeline
+#   • trajectory action servers
+#   • hardware interfaces
+#
+# This file represents the ACTUATOR SPACE of the robot,
+# not the full kinematic chain.
+#
+#
+# DESIGN CONTRACT  (must NEVER be violated)
+# -------------------------------------------------------------
+# 1. Joint names MUST match URDF exactly (case sensitive).
+# 2. Order MUST match controller joint vector order.
+# 3. Only independently actuated joints belong here.
+# 4. Mimic joints MUST NOT be listed.
+# 5. Fixed joints MUST NOT be listed.
+# 6. Changing order breaks trajectory execution silently.
+#
+#
+# KINEMATIC ARCHITECTURE NOTES
+# -------------------------------------------------------------
+# This hand uses coupled finger mechanisms.
+#
+# Distal finger joints are mechanically linked to proximal
+# joints using URDF mimic tags.
+#
+# Therefore:
+#   Controller sends command only to proximal joint
+#   URDF automatically propagates motion to distal joints
+#
+# Listing mimic joints here would cause:
+#   • controller activation failure
+#   • trajectory validation errors
+#   • hardware interface mismatch
+#
+#
+# ACTUATION SUMMARY
+# -------------------------------------------------------------
+# Total URDF joints      : many
+# Fixed joints           : many
+# Mimic joints           : several
+# Real actuators         : 8
+#
+# Only those 8 appear below.
+#
+###############################################################
+
+
+
+controller_joint_names:
+
+  #########################################################
+  # WRIST ORIENTATION DOF
+  #
+  # These define global pose of hand relative to arm flange.
+  # They must appear first because planners assume base→tip
+  # ordering for Jacobian consistency.
+  #########################################################
+  - l_wrist_yaw_joint
+  - l_hand_base_joint
+
+
+
+  #########################################################
+  # THUMB PRIMARY ACTUATORS
+  #
+  # Only first two joints are motor driven.
+  # Remaining thumb joints are mimic-controlled internally.
+  #
+  # Mechanical coupling chain:
+  #   thumb_2 → drives → thumb_3 → drives → thumb_4
+  #########################################################
+  - left_thumb_1_joint
+  - left_thumb_2_joint
+
+
+
+  #########################################################
+  # INDEX FINGER
+  #
+  # Joint_2 mimics Joint_1
+  # Controller must command only Joint_1.
+  #########################################################
+  - left_index_1_joint
+
+
+
+  #########################################################
+  # MIDDLE FINGER
+  #
+  # Same architecture as index finger.
+  #########################################################
+  - left_middle_1_joint
+
+
+
+  #########################################################
+  # RING FINGER
+  #
+  # Same architecture as index finger.
+  #########################################################
+  - left_ring_1_joint
+
+
+
+  #########################################################
+  # LITTLE FINGER
+  #
+  # Same architecture as index finger.
+  #########################################################
+  - left_little_1_joint
+
+
+
+###############################################################
+# VALIDATION CHECKLIST
+# -------------------------------------------------------------
+#
+# If controller fails to start
+#   → name mismatch with URDF
+#
+# If MoveIt plans but robot does not move
+#   → controller joint list mismatch
+#
+# If motion is scrambled or twisted
+#   → incorrect joint order
+#
+# If trajectory is rejected immediately
+#   → joint count mismatch between planner and controller
+#
+# If fingers do not curl naturally
+#   → mimic joints missing or misconfigured in URDF
+#
+###############################################################
+
+
+
+###############################################################
+# PROFESSIONAL MAINTENANCE NOTES
+# -------------------------------------------------------------
+#
+# When modifying URDF:
+#   ALWAYS revalidate this file.
+#
+# When adding new actuators:
+#   Append them here AND update controller YAML.
+#
+# When tuning performance:
+#   Never reorder joints to "test things".
+#   Change gains instead.
+#
+###############################################################

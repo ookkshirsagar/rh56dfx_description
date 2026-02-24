@@ -1,0 +1,235 @@
+############################################################
+# MOVEIT JOINT LIMITS CONFIGURATION
+# Robot: Inspire Hand RH56DFX Left
+#
+# ARCHITECTURE ROLE
+# ----------------------------------------------------------
+# This file defines dynamic motion limits used by
+# MoveIt planners and trajectory generators.
+#
+# It is the single source of truth for:
+#
+#   • Velocity limits
+#   • Acceleration limits
+#   • Planning scaling factors
+#
+# It does NOT define:
+#   • robot geometry
+#   • controllers
+#   • hardware drivers
+#
+# URDF already defines:
+#   • position limits
+#   • effort limits
+#
+# This file OVERRIDES or AUGMENTS runtime motion constraints.
+#
+# Used by:
+#   • MoveIt planners
+#   • trajectory time parameterization
+#   • execution validation
+#
+############################################################
+
+############################################################
+# LIMIT SOURCE NOTE
+# ----------------------------------------------------------
+# All velocity limits are currently taken directly from
+# the vendor URDF specification:
+#
+#     velocity = 2 rad/s
+#
+# These are placeholder limits unless verified against
+# real actuator specifications.
+#
+# When real hardware datasheet values are available:
+#   update max_velocity accordingly.
+#
+# DO NOT tune blindly.
+# Always validate against:
+#   • motor spec sheet
+#   • gearbox limits
+#   • thermal constraints
+############################################################
+
+
+############################################################
+# GLOBAL SCALING FACTORS
+############################################################
+
+# Default scaling applied when planner does not specify values
+#
+# Example:
+# planner requests velocity scaling = 1.0
+# final velocity = max_velocity × scaling_factor
+#
+# Lower values = safer motion
+# Higher values = faster motion
+
+default_velocity_scaling_factor: 0.1
+default_acceleration_scaling_factor: 0.1
+
+
+
+############################################################
+# JOINT LIMIT DEFINITIONS
+############################################################
+#
+# IMPORTANT RULES
+# ----------------------------------------------------------
+# 1. Names MUST match URDF joint names exactly
+# 2. Only controllable joints should appear here
+# 3. Mimic joints must NOT be listed
+# 4. Fixed joints must NOT be listed
+#
+############################################################
+
+joint_limits:
+
+
+
+  ##########################################################
+  # WRIST DOF
+  ##########################################################
+
+  l_wrist_yaw_joint:
+    has_velocity_limits: true
+    max_velocity: 2.0
+    has_acceleration_limits: false
+
+  l_hand_base_joint:
+    has_velocity_limits: true
+    max_velocity: 2.0
+    has_acceleration_limits: false
+
+
+
+  ##########################################################
+  # THUMB ACTUATORS
+  ##########################################################
+
+  left_thumb_1_joint:
+    has_velocity_limits: true
+    max_velocity: 2.0
+    has_acceleration_limits: false
+
+  left_thumb_2_joint:
+    has_velocity_limits: true
+    max_velocity: 2.0
+    has_acceleration_limits: false
+
+
+
+  ##########################################################
+  # PRIMARY FINGER JOINTS
+  ##########################################################
+
+  left_index_1_joint:
+    has_velocity_limits: true
+    max_velocity: 2.0
+    has_acceleration_limits: false
+
+  left_middle_1_joint:
+    has_velocity_limits: true
+    max_velocity: 2.0
+    has_acceleration_limits: false
+
+  left_ring_1_joint:
+    has_velocity_limits: true
+    max_velocity: 2.0
+    has_acceleration_limits: false
+
+  left_little_1_joint:
+    has_velocity_limits: true
+    max_velocity: 2.0
+    has_acceleration_limits: false
+
+
+
+############################################################
+# DESIGN RATIONALE
+############################################################
+#
+# Why only *_1 joints?
+# ----------------------------------------------------------
+# The Inspire hand uses mechanically coupled joints.
+#
+# Distal joints are defined as:
+#     <mimic joint="...">
+#
+# Meaning:
+#     They automatically follow the parent joint.
+#
+# Therefore planners must command only master joints.
+#
+# Sending commands to mimic joints causes:
+#   • controller rejection
+#   • invalid trajectories
+#   • execution failures
+#
+############################################################
+
+
+
+############################################################
+# TUNING GUIDELINES
+############################################################
+#
+# If motion feels slow
+#     increase default_velocity_scaling_factor
+#
+# If motion feels jerky
+#     reduce max_velocity
+#
+# If planner fails frequently
+#     reduce scaling factors
+#
+# If hardware overheats
+#     reduce velocity limits
+#
+############################################################
+
+
+
+############################################################
+# VALIDATION CHECKLIST
+############################################################
+#
+# After launching MoveIt verify:
+#
+#   ros2 param get /move_group robot_description_planning
+#
+# Confirm limits appear for all joints.
+#
+#
+# Test planning:
+#
+#   Plan in RViz
+#   Observe trajectory speed
+#
+#
+# If planning ignores limits:
+#   → file not loaded
+#   → wrong package path
+#
+############################################################
+
+
+
+############################################################
+# FAILURE DIAGNOSTICS
+############################################################
+#
+# Planner generates impossible trajectories
+#   → velocity too high
+#
+# Execution aborts mid motion
+#   → limits stricter than controller allows
+#
+# Robot moves faster than expected
+#   → scaling factor too large
+#
+# Planner fails instantly
+#   → joint name mismatch
+#
+############################################################
