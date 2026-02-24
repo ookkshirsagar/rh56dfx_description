@@ -49,11 +49,16 @@ rh56dfx_description/
 ├── rviz/
 │   ├── rh56dfx_left.rviz           # Pre-configured RViz layout for left hand
 │   └── rh56dfx_right.rviz          # Pre-configured RViz layout for right hand
+├── tutorials/
+│   ├── 01_visualise_the_hand.md         # Launch, RViz navigation, joint sliders, hand poses
+│   ├── 02_embed_in_your_robot.md        # Integrate the hand into your own robot URDF
+│   ├── 03_understanding_mimic_joints.md # What mimic joints are and how to command correctly
+│   └── 04_xacro_vs_macro.md             # When to use rh56dfx.xacro vs rh56dfx_macro.xacro
 └── urdf/
-    ├── rh56dfx.xacro               # Top-level hand URDF (standalone)
+    ├── rh56dfx.xacro               # Top-level hand URDF (standalone visualisation only)
     ├── rh56dfx_macro.xacro         # Reusable xacro macro for embedding in larger robots
-    ├── rh56dfx_left.csv            # Left hand DH/joint parameter data
-    └── rh56dfx_right.csv           # Right hand DH/joint parameter data
+    ├── rh56dfx_left.csv            # Left hand joint parameter data
+    └── rh56dfx_right.csv           # Right hand joint parameter data
 ```
 
 ---
@@ -129,7 +134,7 @@ Use the provided xacro macro to attach the RH56DFX hand to any humanoid/robot ar
 
 ```xml
 <!-- In your robot's xacro file -->
-<xacro:include filename="$(find rh56dfx_description)/urdf/rh56dfx.xacro"/>
+<xacro:include filename="$(find rh56dfx_description)/urdf/rh56dfx_macro.xacro"/>
 
 <!-- Attach left hand to your robot's tool flange -->
 <xacro:rh56dfx_hand
@@ -237,6 +242,17 @@ ros2 param load /controller_manager \
 # Activate hand controller
 ros2 control load_controller --set-state active hand_controller
 ```
+
+---
+
+## Tutorials
+
+| # | Tutorial |
+|---|---|
+| 01 | [Visualising the Hand](tutorials/01_visualise_the_hand.md) |
+| 02 | [Embedding in Your Own Robot](tutorials/02_embed_in_your_robot.md) |
+| 03 | [Understanding Mimic Joints](tutorials/03_understanding_mimic_joints.md) |
+| 04 | [rh56dfx.xacro vs rh56dfx_macro.xacro](tutorials/04_xacro_vs_macro.md) |
 
 ---
 
