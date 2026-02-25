@@ -216,5 +216,5 @@ Always command only the **8 actuated joints**. The mimic joints will follow auto
 
 ## What's Next
 
-- [Tutorial 04 — ros2_control Integration](04_ros2_control_integration.md) *(coming soon)*
+- [Tutorial 05 — ros2_control Integration](05_ros2_control_integration.md) *(coming soon)*
 - [Back to README](../README.md)
