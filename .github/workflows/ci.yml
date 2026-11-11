@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  urdf:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: ros-tooling/setup-ros@v0.7
+        with:
+          required-ros-distributions: jazzy
+      - uses: actions/checkout@v4
+        with:
+          path: src/rh56dfx_description
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ros-jazzy-xacro liburdfdom-tools
+
+      - name: Build
+        shell: bash
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          colcon build --packages-select rh56dfx_description
+
+      - name: Expand and validate every hand variant
+        shell: bash
+        run: |
+          source install/setup.bash
+          cd src/rh56dfx_description
+          for args in "side:=right" "side:=left" "side:=right prefix:=r_" "side:=left prefix:=l_ use_world:=true"; do
+            echo "::group::xacro $args"
+            xacro urdf/rh56dfx.xacro $args > /tmp/hand.urdf
+            check_urdf /tmp/hand.urdf
+            for f in $(grep -o 'package://rh56dfx_description/[^"]*' /tmp/hand.urdf | sed 's#package://rh56dfx_description/##'); do
+              test -f "$f" || { echo "::error::missing mesh $f ($args)"; exit 1; }
+            done
+            echo "::endgroup::"
+          done

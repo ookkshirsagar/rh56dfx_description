@@ -65,7 +65,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}wrist_base_link.STL" />
+        <mesh filename="${mesh_visual}/${side}_wrist_base_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -77,7 +77,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}wrist_base_link.STL" />
+        <mesh filename="${mesh_collision}/${side}_wrist_base_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -137,7 +137,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}wrist_yaw.STL" />
+        <mesh filename="${mesh_visual}/${side}_wrist_yaw.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -149,7 +149,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}wrist_yaw.STL" />
+        <mesh filename="${mesh_collision}/${side}_wrist_yaw.STL" />
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -247,7 +247,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}hand_base.STL"/>
+        <mesh filename="${mesh_visual}/${side}_hand_base.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -259,7 +259,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}hand_base.STL"/>
+        <mesh filename="${mesh_collision}/${side}_hand_base.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -371,7 +371,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}thumb_1.STL"/>
+        <mesh filename="${mesh_visual}/${side}_thumb_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -383,7 +383,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}thumb_1.STL"/>
+        <mesh filename="${mesh_collision}/${side}_thumb_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -483,7 +483,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}thumb_2.STL"/>
+        <mesh filename="${mesh_visual}/${side}_thumb_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -495,7 +495,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}thumb_2.STL"/>
+        <mesh filename="${mesh_collision}/${side}_thumb_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -588,7 +588,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}thumb_rubber_1.STL"/>
+        <mesh filename="${mesh_visual}/${side}_thumb_rubber_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -599,7 +599,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}thumb_rubber_1.STL"/>
+        <mesh filename="${mesh_collision}/${side}_thumb_rubber_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -676,7 +676,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}thumb_3.STL"/>
+        <mesh filename="${mesh_visual}/${side}_thumb_3.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -687,7 +687,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}thumb_3.STL"/>
+        <mesh filename="${mesh_collision}/${side}_thumb_3.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -784,7 +784,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}thumb_rubber_2.STL"/>
+        <mesh filename="${mesh_visual}/${side}_thumb_rubber_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -795,7 +795,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}thumb_rubber_2.STL"/>
+        <mesh filename="${mesh_collision}/${side}_thumb_rubber_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -868,7 +868,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}thumb_4.STL"/>
+        <mesh filename="${mesh_visual}/${side}_thumb_4.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -879,7 +879,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}thumb_4.STL"/>
+        <mesh filename="${mesh_collision}/${side}_thumb_4.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -973,7 +973,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}thumb_rubber_3.STL"/>
+        <mesh filename="${mesh_visual}/${side}_thumb_rubber_3.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -984,7 +984,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}thumb_rubber_3.STL"/>
+        <mesh filename="${mesh_collision}/${side}_thumb_rubber_3.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1059,7 +1059,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}thumb_pad.STL"/>
+        <mesh filename="${mesh_visual}/${side}_thumb_pad.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -1070,7 +1070,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}thumb_pad.STL"/>
+        <mesh filename="${mesh_collision}/${side}_thumb_pad.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1145,7 +1145,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}thumb_tip.STL"/>
+        <mesh filename="${mesh_visual}/${side}_thumb_tip.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -1156,7 +1156,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}thumb_tip.STL"/>
+        <mesh filename="${mesh_collision}/${side}_thumb_tip.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1231,7 +1231,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}index_1.STL"/>
+        <mesh filename="${mesh_visual}/${side}_index_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1242,7 +1242,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}index_1.STL"/>
+        <mesh filename="${mesh_collision}/${side}_index_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1323,7 +1323,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}index_rubber_1.STL"/>
+        <mesh filename="${mesh_visual}/${side}_index_rubber_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -1334,7 +1334,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}index_rubber_1.STL"/>
+        <mesh filename="${mesh_collision}/${side}_index_rubber_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1409,7 +1409,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}index_2.STL"/>
+        <mesh filename="${mesh_visual}/${side}_index_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1420,7 +1420,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}index_2.STL"/>
+        <mesh filename="${mesh_collision}/${side}_index_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1507,7 +1507,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}index_rubber_2.STL"/>
+        <mesh filename="${mesh_visual}/${side}_index_rubber_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -1518,7 +1518,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}index_rubber_2.STL"/>
+        <mesh filename="${mesh_collision}/${side}_index_rubber_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1593,7 +1593,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}index_pad.STL"/>
+        <mesh filename="${mesh_visual}/${side}_index_pad.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -1604,7 +1604,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}index_pad.STL"/>
+        <mesh filename="${mesh_collision}/${side}_index_pad.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1679,7 +1679,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}index_tip.STL"/>
+        <mesh filename="${mesh_visual}/${side}_index_tip.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -1690,7 +1690,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}index_tip.STL"/>
+        <mesh filename="${mesh_collision}/${side}_index_tip.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1765,7 +1765,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}middle_1.STL"/>
+        <mesh filename="${mesh_visual}/${side}_middle_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1776,7 +1776,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}middle_1.STL"/>
+        <mesh filename="${mesh_collision}/${side}_middle_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1857,7 +1857,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}middle_rubber_1.STL"/>
+        <mesh filename="${mesh_visual}/${side}_middle_rubber_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -1868,7 +1868,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}middle_rubber_1.STL"/>
+        <mesh filename="${mesh_collision}/${side}_middle_rubber_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -1942,7 +1942,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}middle_2.STL"/>
+        <mesh filename="${mesh_visual}/${side}_middle_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1953,7 +1953,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}middle_2.STL"/>
+        <mesh filename="${mesh_collision}/${side}_middle_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2038,7 +2038,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}middle_rubber_2.STL"/>
+        <mesh filename="${mesh_visual}/${side}_middle_rubber_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -2049,7 +2049,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}middle_rubber_2.STL"/>
+        <mesh filename="${mesh_collision}/${side}_middle_rubber_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2120,7 +2120,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}middle_pad.STL"/>
+        <mesh filename="${mesh_visual}/${side}_middle_pad.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -2131,7 +2131,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}middle_pad.STL"/>
+        <mesh filename="${mesh_collision}/${side}_middle_pad.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2202,7 +2202,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}middle_tip.STL"/>
+        <mesh filename="${mesh_visual}/${side}_middle_tip.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -2213,7 +2213,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}middle_tip.STL"/>
+        <mesh filename="${mesh_collision}/${side}_middle_tip.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2284,7 +2284,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}ring_1.STL"/>
+        <mesh filename="${mesh_visual}/${side}_ring_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -2295,7 +2295,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}ring_1.STL"/>
+        <mesh filename="${mesh_collision}/${side}_ring_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2372,7 +2372,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}ring_rubber_1.STL"/>
+        <mesh filename="${mesh_visual}/${side}_ring_rubber_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -2383,7 +2383,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}ring_rubber_1.STL"/>
+        <mesh filename="${mesh_collision}/${side}_ring_rubber_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2454,7 +2454,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}ring_2.STL"/>
+        <mesh filename="${mesh_visual}/${side}_ring_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -2465,7 +2465,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}ring_2.STL"/>
+        <mesh filename="${mesh_collision}/${side}_ring_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2545,7 +2545,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}ring_rubber_2.STL"/>
+        <mesh filename="${mesh_visual}/${side}_ring_rubber_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -2556,7 +2556,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}ring_rubber_2.STL"/>
+        <mesh filename="${mesh_collision}/${side}_ring_rubber_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2626,7 +2626,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}ring_pad.STL"/>
+        <mesh filename="${mesh_visual}/${side}_ring_pad.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -2637,7 +2637,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}ring_pad.STL"/>
+        <mesh filename="${mesh_collision}/${side}_ring_pad.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2708,7 +2708,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}ring_tip.STL"/>
+        <mesh filename="${mesh_visual}/${side}_ring_tip.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -2719,7 +2719,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}ring_tip.STL"/>
+        <mesh filename="${mesh_collision}/${side}_ring_tip.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2790,7 +2790,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}little_1.STL"/>
+        <mesh filename="${mesh_visual}/${side}_little_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -2801,7 +2801,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}little_1.STL"/>
+        <mesh filename="${mesh_collision}/${side}_little_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2879,7 +2879,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}little_rubber_1.STL"/>
+        <mesh filename="${mesh_visual}/${side}_little_rubber_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -2890,7 +2890,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}little_rubber_1.STL"/>
+        <mesh filename="${mesh_collision}/${side}_little_rubber_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -2961,7 +2961,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}little_2.STL"/>
+        <mesh filename="${mesh_visual}/${side}_little_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -2972,7 +2972,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}little_2.STL"/>
+        <mesh filename="${mesh_collision}/${side}_little_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -3053,7 +3053,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}little_rubber_2.STL"/>
+        <mesh filename="${mesh_visual}/${side}_little_rubber_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -3064,7 +3064,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}little_rubber_2.STL"/>
+        <mesh filename="${mesh_collision}/${side}_little_rubber_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -3134,7 +3134,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}little_pad.STL"/>
+        <mesh filename="${mesh_visual}/${side}_little_pad.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -3145,7 +3145,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}little_pad.STL"/>
+        <mesh filename="${mesh_collision}/${side}_little_pad.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -3216,7 +3216,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}little_tip.STL"/>
+        <mesh filename="${mesh_visual}/${side}_little_tip.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -3227,7 +3227,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}little_tip.STL"/>
+        <mesh filename="${mesh_collision}/${side}_little_tip.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>
@@ -3297,7 +3297,7 @@ ac
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_visual}/${prefix}palm.STL"/>
+        <mesh filename="${mesh_visual}/${side}_palm.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1"/>
@@ -3308,7 +3308,7 @@ ac
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_collision}/${prefix}palm.STL"/>
+        <mesh filename="${mesh_collision}/${side}_palm.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 0 0 1"/>

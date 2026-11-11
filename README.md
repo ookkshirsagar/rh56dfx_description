@@ -1,5 +1,18 @@
 # rh56dfx_description
 
+<p align="center">
+  <img src="docs/media/rh56dfx.gif" width="360" alt="RH56DFX right hand opening and closing, rendered from this package"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ookkshirsagar/rh56dfx_description/actions/workflows/ci.yml"><img src="https://github.com/ookkshirsagar/rh56dfx_description/actions/workflows/ci.yml/badge.svg" alt="CI"/></a>
+  <img src="https://img.shields.io/badge/ROS%202-Jazzy-22314E?logo=ros" alt="ROS 2 Jazzy"/>
+  <img src="https://img.shields.io/badge/URDF-xacro-0b84b0" alt="URDF / xacro"/>
+  <img src="https://img.shields.io/badge/ros2__control-ready-1a7f37" alt="ros2_control ready"/>
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT license"/>
+</p>
+
+
 A ROS 2 URDF/xacro description package for the **Inspire Robotics RH56DFX** 6-DOF dexterous robotic hand. Supports both **left** and **right** hand variants with full mesh geometry, joint limits, and ros2_control integration.
 
 > **Credits:** The RH56DFX hand hardware is designed and manufactured by [Inspire Robotics](http://www.inspire-robots.com). This ROS 2 description package provides URDF/xacro models and ros2_control configuration for simulation and integration purposes.
@@ -7,6 +20,12 @@ A ROS 2 URDF/xacro description package for the **Inspire Robotics RH56DFX** 6-DO
 ---
 
 ## Overview
+
+<p align="center">
+  <img src="docs/media/grasp_poses.png" width="100%" alt="Open, pinch, tripod and power grasp poses"/>
+  <br/><sub><b>open · pinch · tripod · power</b> — rendered off-screen from this package's URDF and meshes with <code>tools/render_media.py</code></sub>
+</p>
+
 
 The RH56DFX is a high-performance dexterous hand with 6 degrees of freedom featuring:
 - **4 fingers** (index, middle, ring, little) each with 2 links + rubber pads + fingertip

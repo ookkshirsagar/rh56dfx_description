@@ -23,7 +23,7 @@
     <link name="world"/>
     <joint name="world_joint" type="fixed">
       <parent link="world"/>
-      <child link="${prefix_p}hand_root)"/>
+      <child link="${prefix_p}hand_root"/>
       </joint>
   </xacro:if>
 
